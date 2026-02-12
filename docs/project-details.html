@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="theme-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="JesenY 项目详情 - 自动化测试与质量保障项目。" />
+    <link rel="icon" href="assets/images/avatar.svg" type="image/svg+xml">
+    <title>项目详情 | JesenY | 测试工程师</title>
+    <!-- 防闪：与主页一致的主题脚本 -->
+    <script>
+(function() {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components/project-details.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">跳过到内容</a>
+    <div id="particles-js" class="particles-bg" aria-hidden="true"></div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" aria-label="主导航">
+                <a href="index.html" class="logo" aria-label="JesenY 个人主页">JesenY</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about">关于我</a></li>
+                    <li><a href="index.html#skills">技能</a></li>
+                    <li><a href="index.html#projects">项目</a></li>
+                    <li><a href="index.html#contact">联系</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换到深色模式">
+                        <i data-phosphor="moon" class="ph-moon" aria-hidden="true"></i>
+                    </button>
+                    <div class="menu-toggle" aria-label="切换菜单">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+            <!-- 菜单遮罩层 -->
+            <div class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <main id="main" class="project-details-main">
+        <div class="container">
+            <div class="project-details">
+                <h1 id="project-title" class="project-details-title">项目标题</h1>
+                <div class="project-meta">
+                    <span id="project-date">2025年1月</span>
+                    <span id="project-category">自动化测试</span>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-overview">
+                        <h2>项目概述</h2>
+                        <p id="project-description">项目描述内容...</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <h2>技术栈</h2>
+                        <div id="project-tags" class="project-tech-tags"></div>
+                    </div>
+
+                    <div class="project-results">
+                        <h2>项目成果</h2>
+                        <ul id="project-achievements"></ul>
+                    </div>
+
+                    <div class="project-gallery">
+                        <h2>项目截图</h2>
+                        <div class="gallery-grid" id="project-screenshots"></div>
+                    </div>
+                </div>
+
+                <a href="index.html#projects" class="back-btn">
+                    <i data-phosphor="arrow-left" class="ph-arrow-left"></i> 返回项目列表
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" aria-label="页脚">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2026 JesenY. 保留所有权利.</p>
+                    <p class="footer-subtext">资深测试工程师 | 质量保障专家</p>
+                    <p class="footer-build">Built with precision and passion</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/project-details.js"></script>
+</body>
+</html>

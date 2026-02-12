@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5f3ff"/>
+      <stop offset="100%" style="stop-color:#ede9fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg2)" stroke="#ddd6fe" stroke-width="1"/>
+  <g fill="none" stroke="#7c3aed" stroke-width="2">
+    <rect x="120" y="100" width="360" height="200" rx="8"/>
+    <line x1="120" y1="140" x2="480" y2="140"/>
+    <circle cx="140" cy="120" r="6"/>
+    <circle cx="160" cy="120" r="6"/>
+    <circle cx="180" cy="120" r="6"/>
+  </g>
+  <text x="300" y="230" text-anchor="middle" fill="#7c3aed" font-size="14">Page Object · (‹gLÓœ</text>
+  <text x="300" y="310" text-anchor="middle" fill="#6366f1" font-size="16" font-weight="600">Allure ¥J:‹</text>
+  <text x="300" y="332" text-anchor="middle" fill="#94a3b8" font-size="13">:‹*þ 2</text>
+</svg>

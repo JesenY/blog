@@ -1,0 +1,295 @@
+/* 卡片基础样式 */
+article.post-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    max-height: 500px; /* 限制最大高度 */
+}
+
+article.post-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+article.post-card.active {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), 0 0 0 3px var(--secondary-color);
+    transform: translateY(-3px);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+article.post-card .post-card__image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+article.post-card .post-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+article.post-card:hover .post-card__image img {
+    transform: scale(1.1);
+}
+
+.post-card__content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card__title {
+    font-size: 1.5rem;
+    margin: 0 0 12px 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.post-card__title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-card__title a:hover {
+    color: #3498db;
+}
+
+.post-card__meta {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.post-card__category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.post-card__category::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../images/category-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.post-card__excerpt {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.post-card__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.post-card__btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(41, 128, 185, 0.3);
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    article.post-card {
+        max-height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    article.post-card {
+        margin-bottom: 25px;
+        max-height: none;
+    }
+    
+    article.post-card .post-card__image {
+        height: 160px;
+    }
+    
+    .post-card__content {
+        padding: 18px;
+    }
+    
+    .post-card__title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    
+    .post-card__excerpt {
+        margin-bottom: 18px;
+        font-size: 0.95rem;
+    }
+}
+
+/* 项目卡片样式 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.project-card-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-tech-tags .project-tag {
+    background: #f0f4f8;
+    color: #3498db;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid #dbe4ee;
+    margin: 0;
+}
+
+.project-type {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+}
+
+.project-description {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.project-description ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.project-description li {
+    margin-bottom: 8px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: #f0f4f8;
+    color: #3498db;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid #dbe4ee;
+}
+
+/* 查看详情按钮样式已统一到 main.css，与整页 .btn 一致 */
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        padding: 20px;
+    }
+    
+    .project-card h3 {
+        font-size: 1.35rem;
+    }
+    
+    .project-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        padding: 18px;
+        border-radius: 10px;
+    }
+    
+    .project-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .project-description {
+        font-size: 0.9rem;
+    }
+    
+    .project-detail-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="theme-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="JesenY - 自动化测试工程师，专注自动化测试、质量体系与工程效能。柒零卡科技。" />
+    <link rel="icon" href="assets/images/avatar.svg" type="image/svg+xml">
+    <title>JesenY | 测试工程师 | 个人主页</title>
+    <!-- 防闪：尽早根据系统/本地存储设置主题 -->
+    <script>
+(function() {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+})();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">跳过到内容</a>
+    <div id="particles-js" class="particles-bg" aria-hidden="true"></div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" aria-label="主导航">
+                <a href="#" class="logo" aria-label="JesenY 个人主页">JesenY</a>
+                <ul class="nav-menu">
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#skills">技能</a></li>
+                    <li><a href="#projects">项目</a></li>
+                    <li><a href="#contact">联系</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换到深色模式">
+                        <i data-phosphor="moon" class="ph-moon" aria-hidden="true"></i>
+                    </button>
+                    <div class="menu-toggle" aria-label="切换菜单">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+            <!-- 菜单遮罩层 -->
+            <div class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <main id="main">
+    <section class="hero" aria-label="主页首屏">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-typewriter">
+                    <h1 class="hero-title">
+                        <span class="hero-greeting">Hi, I'm </span>
+                        <span class="hero-name">JesenY</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    <div class="hero-tags">
+                        <span class="hero-tag">自动化测试架构师</span>
+                        <span class="hero-tag-divider">·</span>
+                        <span class="hero-tag">质量守护者</span>
+                    </div>
+                </div>
+                <a href="#projects" class="btn btn-cta floating" aria-label="查看我的项目">
+                    查看我的项目
+                    <i data-phosphor="arrow-right" class="ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title" class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>你好！我是 JesenY，一名拥有 8 年经验的资深测试工程师，专注于自动化测试架构和质量保障体系建设。目前就职于柒零卡科技，担任测试主管一职。</p>
+                    <p>我擅长使用 Playwright、Selenium、Cypress 等现代测试框架，构建高效、可靠的自动化测试体系，并与 CI/CD 流程深度集成，实现测试的持续化和智能化。</p>
+                </div>
+                <div class="about-philosophy">
+                    <h3>技术理念</h3>
+                    <p>我坚信 "测试左移，质量前移" 的理念，将测试融入到开发的各个阶段，从需求分析到代码提交，从构建部署到线上监控，实现全流程的质量保障。</p>
+                    <p>通过自动化测试减少重复工作，让团队专注于更有价值的创造性工作，同时通过数据驱动的测试策略，持续优化测试覆盖率和效率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">专业技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i data-phosphor="robot" class="ph-robot"></i>
+                    <h3>自动化测试</h3>
+                    <p>Selenium, Appium, Robotframework覆盖率85%+</p>
+                </div>
+                <div class="skill-card">
+                    <i data-phosphor="code" class="ph-code"></i>
+                    <h3>框架开发</h3>
+                    <p>Python+Pytest框架, AoMaker+Python框架</p>
+                </div>
+                <div class="skill-card">
+                    <i data-phosphor="gauge" class="ph-gauge"></i>
+                    <h3>性能测试</h3>
+                    <p>JMeter, LoadRunner, 10000+并发</p>
+                </div>
+                <div class="skill-card">
+                    <i data-phosphor="plug" class="ph-plug"></i>
+                    <h3>接口测试</h3>
+                    <p>Postman, ApiFox, 覆盖率95%+</p>
+                </div>
+                <div class="skill-card">
+                    <i data-phosphor="robot" class="ph-robot"></i>
+                    <h3>CI/CD</h3>
+                    <p>Jenkins流水线, GitLab CI/CD</p>
+                </div>
+                <div class="skill-card">
+                    <i data-phosphor="database" class="ph-database"></i>
+                    <h3>质量分析</h3>
+                    <p>SonarQube, 缺陷预防分析</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+        <div class="container">
+            <h2 id="projects-title" class="section-title">精选项目</h2>
+            <div class="projects-grid">
+                <!-- 项目 1: 自动化测试框架 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>现代自动化测试框架</h3>
+                        <p>基于 Playwright 构建的现代化自动化测试框架，支持 Web、API 和移动应用测试，实现了测试用例的模块化和数据驱动。</p>
+                        <div class="project-results">
+                            <span class="result-item">• 提升回归测试效率 70%</span>
+                            <span class="result-item">• 测试覆盖率达 90%+</span>
+                            <span class="result-item">• 减少手动测试工作量 85%</span>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="project-tag">Playwright</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Pytest</span>
+                            <span class="project-tag">Allure</span>
+                        </div>
+                    </div>
+                    <button class="project-detail-btn" data-project="automation-framework" aria-label="查看项目详情">
+                        查看详情 <i data-phosphor="chevron-right" class="ph-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- 项目 2: CI/CD 集成 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>CI/CD 测试集成平台</h3>
+                        <p>将测试流程与 GitLab CI/CD 深度集成，实现代码提交自动触发测试，构建失败自动通知，测试报告自动生成的完整流程。</p>
+                        <div class="project-results">
+                            <span class="result-item">• 构建时间缩短 40%</span>
+                            <span class="result-item">• 线上缺陷率降低 65%</span>
+                            <span class="result-item">• 测试反馈时间减少 80%</span>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="project-tag">GitLab CI</span>
+                            <span class="project-tag">Jenkins</span>
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                    <button class="project-detail-btn" data-project="cicd-integration" aria-label="查看项目详情">
+                        查看详情 <i data-phosphor="chevron-right" class="ph-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- 项目 3: 性能测试体系 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>分布式性能测试体系</h3>
+                        <p>基于 JMeter 构建的分布式性能测试体系，支持 10000+ 并发用户的压力测试，实现了测试场景的可视化设计和结果分析。</p>
+                        <div class="project-results">
+                            <span class="result-item">• 系统响应时间降低 60%</span>
+                            <span class="result-item">• 并发处理能力提升 300%</span>
+                            <span class="result-item">• 资源利用率优化 40%</span>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="project-tag">JMeter</span>
+                            <span class="project-tag">Grafana</span>
+                            <span class="project-tag">Prometheus</span>
+                            <span class="project-tag">InfluxDB</span>
+                        </div>
+                    </div>
+                    <button class="project-detail-btn" data-project="performance-testing" aria-label="查看项目详情">
+                        查看详情 <i data-phosphor="chevron-right" class="ph-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- 项目 4: 质量保障平台 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>智能质量保障平台</h3>
+                        <p>整合自动化测试、性能测试、代码质量分析和缺陷管理的综合质量保障平台，提供一站式的质量监控和分析服务。</p>
+                        <div class="project-results">
+                            <span class="result-item">• 质量问题发现提前 75%</span>
+                            <span class="result-item">• 代码质量评分提升 35%</span>
+                            <span class="result-item">• 团队质量意识显著增强</span>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="project-tag">SonarQube</span>
+                            <span class="project-tag">Jira</span>
+                            <span class="project-tag">Elasticsearch</span>
+                            <span class="project-tag">Kibana</span>
+                        </div>
+                    </div>
+                    <button class="project-detail-btn" data-project="quality-platform" aria-label="查看项目详情">
+                        查看详情 <i data-phosphor="chevron-right" class="ph-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="section-title">联系方式</h2>
+            <div class="contact-content">
+                <!-- 联系表单 -->
+                <form class="modern-contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">姓名</label>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        <div class="form-group half-width">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">邮箱</label>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" ">
+                        <label for="phone">电话 (可选)</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">您的留言</label>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+                    <button type="submit" class="modern-btn" aria-label="发送消息">
+                        <span>发送消息</span>
+                        <i data-phosphor="paper-plane" class="ph-paper-plane"></i>
+                    </button>
+                    <div id="formSuccess" class="form-success">
+                        <i data-phosphor="check-circle" class="ph-check-circle"></i>
+                        <span>消息已发送成功！</span>
+                    </div>
+                </form>
+                
+                <!-- 联系信息 -->
+                <div class="contact-info">
+                    <h3>直接联系</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i data-phosphor="envelope" class="ph-envelope"></i>
+                            <a href="mailto:jesen0913@163.com" aria-label="发送邮件">jesen0913@163.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i data-phosphor="github-logo" class="ph-github-logo"></i>
+                            <a href="https://github.com/jeseny-projects" target="_blank" rel="noopener noreferrer" aria-label="访问 GitHub">GitHub</a>
+                        </div>
+                        <div class="contact-item">
+                            <!-- <i data-phosphor="gitee-logo" class="ph-gitee-logo"></i> -->
+                             <i data-phosphor="gitlab-logo-simple" class="ph-gitlab-logo-simple"></i>
+                            <a href="https://gitee.com/jeseny-projects" target="_blank" rel="noopener noreferrer" aria-label="访问 Gitee">Gitee</a>
+                        </div>
+                        <div class="contact-item">
+                            <i data-phosphor="file-text" class="ph-file-text"></i>
+                            <a href="https://resume.jeseny.com" target="_blank" rel="noopener noreferrer" aria-label="查看简历">查看简历</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 联系提示 -->
+                    <div class="contact-note">
+                        <p>如果您对我的项目感兴趣，或者有合作机会，欢迎随时联系我！</p>
+                        <p>我会在 24 小时内回复您的消息。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer" aria-label="页脚">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2026 JesenY. 保留所有权利.</p>
+                    <p class="footer-subtext">资深测试工程师 | 质量保障专家</p>
+                    <p class="footer-build">Built with precision and passion</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="back-to-top" aria-label="回到顶部">
+        <i data-phosphor="arrow-up" class="ph-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

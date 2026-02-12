@@ -1,0 +1,120 @@
+/* 组件样式 */
+/* 按钮 */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn--primary:hover {
+  background-color: var(--dark-color);
+}
+
+.btn--secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* 卡片 */
+.card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.card__header {
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  border-bottom: var(--border-width) solid var(--light-color);
+}
+
+.card__title {
+  margin: 0;
+}
+
+/* 导航 */
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin-right: var(--spacing-md);
+}
+
+.nav__link {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--secondary-color);
+}
+
+.nav__link.active {
+  color: var(--secondary-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.btn.active {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  box-shadow: 0 0 0 2px var(--dark-color), 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px) scale(1.02);
+  z-index: 1;
+}
+
+/* 表单 */
+.form__group {
+  position: relative;
+  margin-bottom: var(--spacing-md);
+}
+
+.form__label {
+  position: absolute;
+  left: var(--spacing-xs);
+  top: var(--spacing-xs);
+  color: var(--gray-color);
+  background-color: var(--white);
+  padding: 0 var(--spacing-xs);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.form__control {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-xs);
+  border: var(--border-width) solid var(--light-color);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  z-index: 1;
+}
+
+.form__control:focus {
+  border-color: var(--primary-color);
+}
+
+.form__control:focus + .form__label,
+.form__control:not(:placeholder-shown) + .form__label {
+  transform: translateY(calc(-1 * var(--spacing-sm))) scale(0.9);
+  top: 0;
+  left: var(--spacing-sm);
+  color: var(--primary-color);
+  background-color: var(--white);
+  z-index: 2;
+}

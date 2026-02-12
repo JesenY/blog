@@ -1,0 +1,284 @@
+/* 项目详情页 - 与主页样式统一（主题变量、圆角、间距） */
+
+.project-details-main {
+    padding-top: calc(80px + env(safe-area-inset-top, 0) + clamp(2rem, 6vw, 4rem));
+    padding-left: clamp(var(--space-md), 5vw, var(--space-xl));
+    padding-right: clamp(var(--space-md), 5vw, var(--space-xl));
+    padding-bottom: calc(clamp(2rem, 6vw, 4rem) + env(safe-area-inset-bottom, 0));
+    min-height: 60vh;
+}
+
+.project-details {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-color);
+    padding: var(--space-xl);
+    margin-top: var(--space-lg);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-details-title {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+    margin-bottom: var(--space-sm);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    color: var(--gray-color);
+    font-size: 0.9375rem;
+}
+
+.project-content h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: var(--space-xl) 0 var(--space-md);
+    padding-bottom: var(--space-xs);
+    border-bottom: 1px solid var(--border-color);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.project-overview p {
+    line-height: 1.8;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.project-results ul {
+    padding-left: var(--space-lg);
+}
+
+.project-results li {
+    margin-bottom: var(--space-xs);
+    line-height: 1.7;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* 技术标签（与主页 project-tag 一致） */
+.project-details .project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+}
+
+.project-details .project-tech-tags .project-tag {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 0.375rem 0.875rem;
+    background: var(--border-light);
+    color: var(--gray-color);
+    border-radius: 9999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-details .project-tech-tags .project-tag:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+}
+
+/* 画廊 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.gallery-grid img,
+.gallery-img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--border-light);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.03);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* 图片模态框 */
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+    padding: var(--space-md);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: var(--radius-md);
+}
+
+.close-modal {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: opacity 0.2s ease;
+}
+
+.close-modal:hover {
+    opacity: 0.8;
+}
+
+/* 返回项目列表按钮已统一到 main.css，与 .btn / .btn-outline 一致 */
+
+/* 响应式 + 移动端优化 */
+@media (max-width: 768px) {
+    .project-details-main {
+        padding-top: calc(56px + env(safe-area-inset-top, 0) + var(--space-sm));
+        padding-left: var(--space-sm);
+        padding-right: var(--space-sm);
+        padding-bottom: calc(var(--space-md) + env(safe-area-inset-bottom, 0));
+    }
+
+    .project-details {
+        padding: var(--space-md);
+        margin-top: var(--space-md);
+    }
+
+    .project-details-title {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: var(--space-xs);
+    }
+
+    .project-meta {
+        gap: var(--space-sm);
+        margin-bottom: var(--space-lg);
+        font-size: 0.875rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.125rem;
+        margin: var(--space-lg) 0 var(--space-sm);
+        padding-bottom: var(--space-xs);
+    }
+
+    .project-content p {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
+
+    .project-results ul {
+        padding-left: var(--space-md);
+    }
+
+    .project-results li {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: var(--space-xs);
+    }
+
+    .project-details .project-tech-tags {
+        gap: var(--space-xs);
+    }
+
+    .project-details .project-tech-tags .project-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+        margin-top: var(--space-sm);
+    }
+
+    .gallery-item {
+        min-height: 100px;
+    }
+
+    .back-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .image-modal {
+        padding: var(--space-sm);
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    .modal-content img {
+        max-height: 70vh;
+    }
+
+    .close-modal {
+        top: -2rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-details-title {
+        font-size: 1.25rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.0625rem;
+    }
+
+    .project-content p,
+    .project-results li {
+        font-size: 0.875rem;
+    }
+
+    .gallery-item {
+        min-height: 80px;
+    }
+}

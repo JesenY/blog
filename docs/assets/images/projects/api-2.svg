@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/></marker>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg6)" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="100" y="80" width="180" height="220" rx="6" fill="white" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="320" y="80" width="180" height="220" rx="6" fill="white" stroke="#94a3b8" stroke-width="1"/>
+  <text x="190" y="108" text-anchor="middle" fill="#475569" font-size="12">Swagger</text>
+  <text x="410" y="108" text-anchor="middle" fill="#475569" font-size="12">Pytest</text>
+  <path d="M280 190 L320 190" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="330" text-anchor="middle" fill="#2563eb" font-size="16" font-weight="600">API CI</text>
+  <text x="300" y="352" text-anchor="middle" fill="#94a3b8" font-size="13">Sample 2</text>
+</svg>
